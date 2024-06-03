@@ -15,11 +15,11 @@ function render(){
     <tr>
     <td><img src='${item.image}' alt='coin image'></td>
     <td>${item.name}</td>
-    <td>${item.symbol}</td>
+    <td>${item.symbol.toUpperCase()}</td>
     <td>$${item.current_price}</td>
     <td>$${item.total_volume}</td>
-    <td id="a${i}">${item.market_cap_change_percentage_24h}%</td>
-    <td>$${item.market_cap}</td>
+    <td id="a${i}">${item.market_cap_change_percentage_24h.toFixed(2)}%</td>
+    <td>Mkt Cap:$${item.market_cap}</td>
     </tr>`;
     
     if (item.market_cap_change_percentage_24h>0) {
@@ -50,11 +50,11 @@ if (cap==item.market_cap) {
 <tr>
 <td><img src='${item.image}' alt='coin image'></td>
 <td>${item.name}</td>
-<td>${item.symbol}</td>
+<td>${item.symbol.toUpperCase()}</td>
 <td>$${item.current_price}</td>
 <td>$${item.total_volume}</td>
-<td id='b${i}'>${item.market_cap_change_percentage_24h}%</td>
-<td>$${item.market_cap}</td>
+<td id='b${i}'>${item.market_cap_change_percentage_24h.toFixed(2)}%</td>
+<td>Mkt Cap:$${item.market_cap}</td>
 </tr>`;
 if (item.market_cap_change_percentage_24h>0) {
     document.querySelector(`#b${i}`).style.color="#14840b";
@@ -80,11 +80,11 @@ sortbypercent.addEventListener('click',()=>{
         <tr>
         <td><img src='${item.image}' alt='coin image'></td>
         <td>${item.name}</td>
-        <td>${item.symbol}</td>
+        <td>${item.symbol.toUpperCase()}</td>
         <td>$${item.current_price}</td>
         <td>$${item.total_volume}</td>
-        <td id='c${i}'>${item.market_cap_change_percentage_24h}%</td>
-        <td>$${item.market_cap}</td>
+        <td id='c${i}'>${item.market_cap_change_percentage_24h.toFixed(2)}%</td>
+        <td>Mkt Cap:$${item.market_cap}</td>
         </tr>`;
         if (item.market_cap_change_percentage_24h>0) {
             document.querySelector(`#c${i}`).style.color="#14840b";
@@ -111,11 +111,11 @@ if (arr1.length>0) {
     <tr>
     <td><img src='${item.image}' alt='coin image'></td>
     <td>${item.name}</td>
-    <td>${item.symbol}</td>
+    <td>${item.symbol.toUpperCase()}</td>
     <td>$${item.current_price}</td>
     <td>$${item.total_volume}</td>
-    <td id="d${i}">${item.market_cap_change_percentage_24h}%</td>
-    <td>$${item.market_cap}</td>
+    <td id="d${i}">${item.market_cap_change_percentage_24h.toFixed(2)}%</td>
+    <td>Mkt Cap:$${item.market_cap}</td>
     </tr>`;
     
     if (item.market_cap_change_percentage_24h>0) {
